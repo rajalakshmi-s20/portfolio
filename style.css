@@ -7,10 +7,6 @@
     text-decoration: none;
 }
 
-body{
-    background-color: black;
-}
-
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -20,13 +16,14 @@ body{
 .navbar{
     position: fixed;
     width: 100%;
+    z-index: 999;
     padding: 30px 0;
     font-family: 'Ubuntu','sans-serif';
     transition: all 0.3s ease;
 }
 
-.navbar .sticky{
-    padding: 30px 0;
+.navbar.sticky{
+    padding: 15px 0;
     background: crimson;
 }
 
@@ -47,7 +44,7 @@ body{
     transition: all 0.3s ease;
 }
 
-.navbar .sticky .logo a span{
+.navbar.sticky .logo a span{
     color: #fff;
 }
 
@@ -68,7 +65,7 @@ body{
     color: crimson;
 }
 
-.navbar .sticky .menu li a:hover{
+.navbar.sticky .menu li a:hover{
     color: #fff;
 }
 
@@ -81,7 +78,7 @@ body{
 
 .home{
     display: flex;
-    background: url("images/background.png") no-repeat center;
+    background: url("images/banner.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -129,9 +126,168 @@ body{
     background: none;
 }
 
-@media(max-width: 1104px){
+section{
+    padding: 100px 0;
+}
+
+.about, 
+.services{
+    font-family: 'Poppins', sans-serif;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    padding: 5px;
+    font-size: 20px;
+    color: crimson;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.about .title::after{
+    content: "Who I Am";
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: crimson;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.about .about-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3 ease;
+}
+
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+.about .about-content, 
+.services .services-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services{
+    color: #fff;
+    background: #111;
+}
+
+.services .title::before{
+    background: #fff;
+}
+
+.services .title::after{
+    background: #111;
+    content: "What I Provide";
+}
+
+.services .services-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services .services-content .card:hover{
+    background: crimson;
+}
+
+.services .services-content .card:hover i{
+    color: #fff;
+}
+
+.services .services-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.services .services-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.services .services-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.services .services-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+@media(max-width: 1300px){
     .home .max-width{
         margin-left: 0px;
+    }
+}
+
+@media(max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
     }
 }
 
@@ -143,7 +299,7 @@ body{
 
 @media(max-width: 947px){
     .max-width{
-        padding: 0 80px;
+        padding: 0 50px;
     }
 
     .menu-btn{
@@ -167,7 +323,7 @@ body{
         transition: all 0.3s ease;
     }
 
-    .navbar .menu .active{
+    .navbar .menu.active{
         left: 0;
     }
 
@@ -193,6 +349,29 @@ body{
         font-size: 23px;
         padding: 10px 30px;
     }
+
+    .max-width{
+        max-width: 800px;
+    }
+
+    .about .about-content .column{
+        width: 100%;
+    }
+
+    .about .about-content .left{
+        display: block;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right{
+        flex: 100%;
+    }
+
+    .services .services-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 
 @media(max-width: 690px){
@@ -210,6 +389,10 @@ body{
 
     .home .home-content a{
         font-size: 20px;
+    }
+
+    .services .services-content .card{
+        width: 100%;
     }
 }
 
