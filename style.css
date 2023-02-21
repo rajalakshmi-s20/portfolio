@@ -78,9 +78,10 @@
 
 .home{
     display: flex;
-    background: url("images/banner.jpg") no-repeat center;
+    background: url("https://lh3.googleusercontent.com/iPSt9plw72oj2OHHTd6L09w8TS2bf49gM6CH9S00DJD1yLh7O2Z8ohUrxrnjDPATdVVUOaKcINcOEQMGXHBGq-PTKw63QwfiIBLS6o2MmhlDBQBc_aXc35EnbhZPQNMoO2zegGS4pA=w2400") no-repeat center;
     height: 100vh;
     color: #fff;
+    background-size: cover;
     min-height: 500px;
     font-family: 'ubuntu', sans-serif;
 }
@@ -180,7 +181,7 @@ section .title::after{
 }
 
 .about .about-content .left img{
-    height: 400px;
+    height: 500px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
