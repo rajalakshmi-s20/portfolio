@@ -299,6 +299,10 @@ section .title::after{
     text-align: justify;
 }
 
+.skills .skills-content .left span{
+    display: block;
+}
+
 .skills .skills-content .left a{
     display: inline-block;
     background: crimson;
@@ -372,7 +376,7 @@ section .title::after{
 }
 
 .skills .skills-content .right .react::before{
-    width: 60%;
+    width: 80%;
 }
 
 .skills .skills-content .right .php::before{
