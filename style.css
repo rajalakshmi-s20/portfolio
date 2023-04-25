@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -135,7 +139,8 @@ section{
 .services,
 .skills,
 .projects,
-.contact{
+.contact,
+.footer{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -580,6 +585,22 @@ section .title::after{
 .contact .right form .button button:hover{
     color: crimson;
     background: none;
+}
+
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
 }
 
 @media(max-width: 1300px){
