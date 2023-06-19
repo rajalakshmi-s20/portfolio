@@ -432,6 +432,10 @@ section .title::after{
     width: 80%;
 }
 
+.skills .skills-content .left li p{
+    color: crimson;
+}
+
 .projects .title::after{
     content: "What I Made";
 }

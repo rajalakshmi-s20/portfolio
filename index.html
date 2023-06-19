@@ -55,9 +55,10 @@
                     <img src="images\Photo.jpg" alt="">
                 </div>
                 <div class="column right">
-                    <div class="text">I'm RajaLakshmi and I'm a <span class="typing-2"></span></div>
-                    <p>Enthusiastic full-stack developer eager to contribute to team success through hard work, attention to detail, and excellent organizational skills. A clear understanding of the task and training in web development. Motivated to learn, grow and gain real-world experience and serve the community. Currently, I am about to finish college. In the course of these few years during under graduation, we have been taught a lot of things. But the practical application of my knowledge will help me know how much I learned. I am very passionate about my work and never let you down for my work. That is why you may hire me.</p>
-                    <a href="#">Download Resume</a>
+                    <div class="text">I'm RajaLakshmi and I'm a <span class="typing-2"></span></div><br>
+                    <p>Enthusiastic software developer eager to contribute to team success through hard work, attention to detail and excellent organizational skills. As a core programmer, I like taking on challenges and being part of finding the solution. A fast learner with creative problem-solving, decision-making, good coding and communication skills.</p><br>
+                    <p>Currently, I am about to finish college. In the course of these few years during under graduation, we have been taught a lot of things. But the practical application of my knowledge will help me know how much I learned. I am very passionate about my work and never let you down for my work. That is why you may hire me.</p>
+                    <a href="images\Resume.pdf" download>Download Resume</a>
                 </div>
             </div>
         </div>
@@ -100,14 +101,26 @@
                     <div class="text">My Experiences</div>
                         <p class="experience">
                             <ul>
-                                <li>Web development and designing Intern (Feb 2023 - Mar 2023)
+                                <li>Web Development Intern (Feb 2023 - Mar 2023)
                                 <span>At CodeClause</span></li>
-                                <li>Web Development Intern (Jan 2023 - Feb 2023)
+                                <li>Web development and designing Intern (Jan 2023 - Feb 2023)
                                 <span>At Oasis Infobyte</span></li>
                                 <li>Web Developer Intern (Dec 2022 - Jan 2023)
                                 <span>At LetsGrowMore</span></li>
                             </ul>
                         </p>
+                    <br>
+                    <div class="text">My Education</div>
+                    <p class="education">
+                        <ul>
+                            <li>B.E. (Computer Science Engineering) <p>CGPA - 9.09</p>
+                            <span>Velammal Enginering College  (2020-2024)</span></li>
+                            <li>Class XII (Computer Science) <p>Percentage - 84.7%</p>
+                            <span>Sethu Bhaskara Matriculation Higher Secondary School  (2020)</span></li>
+                            <li>Class X (Science) <p>Percentage - 93.6%</p>
+                            <span>Sri Vidhya Nikethan Matriculation High School  (2018)</span></li>
+                        </ul>
+                    </p>
                     <a href="#">Read more</a>
                 </div>
                 <div class="column right">
@@ -265,28 +278,24 @@
     <footer class="footer">
         <span>Created By <a href="#">RAJALAKSHMI</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
     </footer>
-    <script src="script.js"></script>
-    <form name="submit-to-google-sheet">
-        <input name="email" type="email" placeholder="Email" required>
-        <button type="submit">Send</button>
-      </form>
-      
-      <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwkkkRuPr1fW8pmlwRCIaEK50Z5bWQzXMFktSZ8_ailpsV5cBjAAAS2Vbn8-gBoeojZ/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully!"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            } )
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+
+    <script src="script.js"></script>      
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwkkkRuPr1fW8pmlwRCIaEK50Z5bWQzXMFktSZ8_ailpsV5cBjAAAS2Vbn8-gBoeojZ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        } )
+        .catch(error => console.error('Error!', error.message))
+    })
+    </script>
 </body>
 </html>
