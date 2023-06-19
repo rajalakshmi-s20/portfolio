@@ -237,25 +237,26 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form action="#" name="submit-to-google-sheet">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" name="Name" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" name="Email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="subject" required>
+                            <input type="text" name="Subject" placeholder="subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="5" placeholder="Description" required></textarea>
+                            <textarea cols="30" rows="5" name="Description" placeholder="Description" required></textarea>
                         </div>
                         <div class="button">
                             <button type="submit">Send Message</button>
                         </div>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -265,5 +266,27 @@
         <span>Created By <a href="#">RAJALAKSHMI</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
     </footer>
     <script src="script.js"></script>
+    <form name="submit-to-google-sheet">
+        <input name="email" type="email" placeholder="Email" required>
+        <button type="submit">Send</button>
+      </form>
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwkkkRuPr1fW8pmlwRCIaEK50Z5bWQzXMFktSZ8_ailpsV5cBjAAAS2Vbn8-gBoeojZ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            } )
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>

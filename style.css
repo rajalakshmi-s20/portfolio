@@ -629,6 +629,15 @@ footer span a:hover{
     text-decoration: underline;
 }
 
+#msg{
+    color: green;
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: large;
+    text-align: center;
+}
+
 @media(max-width: 1300px){
     .home .max-width{
         margin-left: 0px;
