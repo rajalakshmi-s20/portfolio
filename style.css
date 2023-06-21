@@ -326,6 +326,13 @@ section .title::after{
     width: calc(50% - 30px);
 }
 
+.skills .skills-content .text i,
+.contact .contact-content .text i{
+    font-size: 25px;
+    color: crimson;
+    margin-left: 10px;
+}
+
 .skills .skills-content .left .text{
     font-size: 25px;
     font-weight: 600;
@@ -465,7 +472,7 @@ section .title::after{
 }
 
 .projects .carousel .card .text{
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
@@ -481,6 +488,12 @@ section .title::after{
 
 .projects .carousel .card:hover img{
     border-color: crimson;
+}
+
+.projects .carousel .card i{
+    margin-top: 20px;
+    font-size: 25px;
+    color: #fff;
 }
 
 .owl-dots{
@@ -615,6 +628,12 @@ section .title::after{
 .contact .right form .button button:hover{
     color: crimson;
     background: none;
+}
+
+.contact .contact-content .links i{
+    font-size: 30px;
+    color: crimson;
+    margin-top: 50px;
 }
 
 footer{
