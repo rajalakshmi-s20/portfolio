@@ -400,27 +400,27 @@ section .title::after{
 }
 
 .skills .skills-content .right .html::before{
-    width: 90%;
+    width: 85%;
 }
 
 .skills .skills-content .right .css::before{
-    width: 70%;
+    width: 80%;
 }
 
 .skills .skills-content .right .javascript::before{
-    width: 70%;
+    width: 75%;
 }
 
 .skills .skills-content .right .c::before{
-    width: 90%;
+    width: 95%;
 }
 
 .skills .skills-content .right .cplusplus::before{
-    width: 80%;
+    width: 90%;
 }
 
 .skills .skills-content .right .react::before{
-    width: 80%;
+    width: 70%;
 }
 
 .skills .skills-content .right .php::before{
